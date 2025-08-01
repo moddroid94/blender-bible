@@ -25,7 +25,7 @@
 				<li><a href="/contribute">Contribute</a></li>
 			</ul>
 			</div>
-			<a href="/" class="btn btn-ghost text-xl">daisyUI</a>
+			<a href="/" class="btn btn-ghost text-xl">Blender Bible</a>
 		</div>
 		<div class="navbar-center hidden lg:flex">
 			<ul class="menu menu-horizontal px-1">

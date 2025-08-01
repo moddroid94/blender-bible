@@ -1,27 +1,48 @@
 <script>
+
 	let { data } = $props();
 </script>
 
-<h1>blog</h1>
 
-
-<div class="w-full grid grid-cols-auto lg:grid-flow-col gap-4 justify-center p-4">
-{#each data.summaries as { slug, title }}
-	<div class="card bg-base-100 w-96 shadow-sm">
+<div class="w-full flex flex-wrap gap-4 justify-center p-4">
+{#each data.summaries as { vid, title, author, description, version, renderer, tags }}
+	<div href="/" class="card bg-base-300 w-96 shadow-sm transition duration-500 outline-1 outline-primary/0 hover:outline-primary/20 ">
 		<figure>
-			<img
-			src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+			<a href={'https://www.youtube.com/watch?v=' + vid}>
+				<img class="object-cover w-full"
+			src={'https://i.ytimg.com/vi/'+ vid + '/hqdefault.jpg'}
 			alt="Shoes" />
+			</a>
 		</figure>
 		<div class="card-body">
 			<h2 class="card-title">
-			Card Title
-			<div class="badge badge-secondary">NEW</div>
+			{title}
+			<div class="badge badge-primary text-primary-content">NEW</div>
 			</h2>
-			<p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+			<h3 class="text-md text-neutral-400 font-medium">
+				By: {author}
+			</h3>
+			<p class="py-2">{description}</p>
+			<div class="flex gap-2">
+				<button class="btn btn-sm btn-warning text-accent-content">Blender {version}</button>
+				{#if renderer}
+					<button class="btn btn-sm btn-warning text-accent-content">{renderer}</button>
+				{/if}
+			</div>
 			<div class="card-actions justify-end">
-			<div class="badge badge-outline">Fashion</div>
-			<div class="badge badge-outline">Products</div>
+				{#each tags as tag, index}
+					{#if index < 3}
+						<button class="btn btn-soft btn-primary btn-xs">
+							#{tag}
+						</button>
+					{:else if index == 3}
+						<button class="btn btn-soft btn-accent btn-xs">
+							more
+						</button>
+					{/if}
+					
+				{/each}
+				
 			</div>
 		</div>
 	</div>

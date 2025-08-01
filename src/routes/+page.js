@@ -1,10 +1,13 @@
-import { posts } from '../lib/data.js';
+import { posts } from '$lib/tutorials/data.js';
 
 export function load() {
 	return {
 		summaries: posts.map((post) => ({
-			slug: post.slug,
-			title: post.title
+			url: post.url,
+			title: post.title,
+			author: post.author,
+			description: post.description,
+			tags: post.tags
 		}))
 	};
 }
