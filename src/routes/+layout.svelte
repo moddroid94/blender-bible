@@ -5,7 +5,7 @@
 </script>
 
 <nav class="pb-15">
-	<div class="navbar bg-base-100 shadow-sm fixed z-99">
+	<div class="navbar bg-base-100 shadow-md fixed z-99">
 		<div class="navbar-start">
 			<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -45,7 +45,7 @@
 			</ul>
 		</div>
 		<div class="navbar-end">
-			<a class="btn">Button</a>
+			
 		</div>
 	</div>
 </nav>
