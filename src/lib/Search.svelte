@@ -3,7 +3,7 @@
 </script>
 
 
-<input type="text" class="input join-item !outline-0 w-[50%] focus:w-[400%] transition-all" 
+<input type="text" class="input join-item !outline-0 w-[40%] focus:w-[400%] transition-all" 
             id="search-field" 
             placeholder="Search" 
             autocomplete="off"

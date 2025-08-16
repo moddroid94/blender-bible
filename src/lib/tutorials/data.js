@@ -16,6 +16,7 @@ export const posts = [
 		author: 'x4b1d',
 		title: 'How to Geo Nodes',
 		description: 'Test Tutorial Data',
+		version: '4.5',
 		tags: ['Blender4.5+', 'Nodes', 'Geometry']
 	},
 
@@ -25,6 +26,7 @@ export const posts = [
 		author: 'x4b1d',
 		title: 'How to Geo Nodes',
 		description: 'Test Tutorial Data',
+		version: '4',
 		tags: ['blender', 'octane', 'nodes', 'geometry']
 	},
 
@@ -34,6 +36,7 @@ export const posts = [
 		author: 'x4b1d',
 		title: 'How to Geo Nodes',
 		description: 'Test Tutorial Data',
+		version: '3.5',
 		tags: ['blender', 'octane', 'nodes', 'geometry']
 	},
 
@@ -43,6 +46,7 @@ export const posts = [
 		author: 'x4b1d',
 		title: 'How to Geo Nodes',
 		description: 'Test Tutorial Data',
+		version: '4.2',
 		tags: ['blender', 'octane', 'nodes', 'geometry']
 	},
 

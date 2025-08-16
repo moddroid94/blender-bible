@@ -1,3 +1,4 @@
+export const ssr = false;
 import { posts } from '$lib/tutorials/data.js';
 
 export function load() {
