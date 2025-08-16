@@ -3,7 +3,7 @@ export const posts = [
 		vid: '6oYQrodgt14',
 		image: '6oYQrodgt14',
 		author: 'x4b1d',
-		title: 'How to Geo Nodes',
+		title: 'How to Geo Nodes pt.2',
 		description: 'Test Tutorial Data',
 		version: '4.5',
 		renderer: 'Octane',
