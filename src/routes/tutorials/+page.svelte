@@ -87,7 +87,7 @@
 				<Search bind:searchTerm on:input={searchVideo} />
 				<Menu {tags} bind:selectedTags />
 				<Select {vers} bind:selectedVer />
-				<button class="join-item btn bg-base-300 transition-colors hover:bg-radial hover:from-primary/20 border-1 border-white/20 ">Search</button>
+				
 			</div>
 		</div>
 	</div>

@@ -21,7 +21,7 @@
 		<div class="badge badge-primary text-primary-content">NEW</div>
 		</h2>
 		<h3 class="text-md text-neutral-400 font-medium">
-			By: {author}
+			By: <a href={"/channels/" + author}>{author}</a>
 		</h3>
 		<p class="py-2">{description}</p>
 		<div class="flex gap-2">

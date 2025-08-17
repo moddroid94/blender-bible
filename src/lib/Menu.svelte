@@ -1,6 +1,7 @@
 <script>
+	import { onDestroy } from "svelte";
+
 	let {tags, selectedTags = $bindable()} = $props();
-	let dropstate = $state(false)
 
 	const setTag = (tag, v) => {
 		if (!selectedTags.includes(tag)) {
@@ -14,6 +15,7 @@
 			}
 		}
 	}
+
 	const toggleDrop = (element, state) => {
 		if (state) {
 			 let newclass = element.className.replace("opacity-0 scale-y-0", "opacity-100");
@@ -25,26 +27,27 @@
 		
 	}
 
-	const closeDrop = (event) => {
+	const handleclick = (event) => {
 		let element = document.getElementById("drop-controlled")
 		if (event.target.id == "drop-controller") {
 			toggleDrop(element, element.classList.contains("opacity-0"))
 		} else if (tags.includes(event.target.id)) {
-
+			return;
 		} else {
 			toggleDrop(element,false)
 		}
-		
-		console.log(element, event.target.id)
-		
 	}
 
-	window.addEventListener("click", closeDrop)
+	window.addEventListener("click", handleclick)
+
+	onDestroy(() => {
+		window.removeEventListener('click', handleclick)
+	})
 </script>
 
 
-<div id="drop-controller" class="menu input join-item will-change transition-all duration-500 !outline-0 w-[30%] cursor-pointer content-clip">
-	<span id="drop-controller" class="truncate text-ellipsis w-full">{selectedTags.length > 0 ? selectedTags : "all tags"}</span>
+<div id="drop-controller" class="menu input join-item will-change transition-all duration-500 !outline-0 w-[20%] cursor-pointer content-clip">
+	<span id="drop-controller" class="truncate text-ellipsis w-full">{selectedTags.length > 0 ? selectedTags : "All tags"}</span>
 	<div id="drop-controlled" class="flex transition-all will-change absolute bg-base-200 border rounded-md w-full mt-8 origin-top opacity-0 scale-y-0 overflow-hidden">
 		<ul class="bg-base w-full will-change transition-all duration-500">
 			{#each tags as tag }
