@@ -1,6 +1,16 @@
 import adapter from '@sveltejs/adapter-cloudflare';
 
 /** @type {import('@sveltejs/kit').Config} */
-const config = { kit: { } };
+const config = {
+	kit: {
+		adapter: adapter({
+			fallback: 'plaintext',
+			routes: {
+				include: ['/*'],
+				exclude: ['<all>']
+			}
+		})
+	}
+};
 
 export default config;
