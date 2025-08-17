@@ -35,14 +35,17 @@
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Category</th>
                     <th>Channel</th>
                 </tr>
             </thead>
             <tbody>
-            {#each channels as channel}
+            {#each data.channels as channel}
                 <tr  class="transition hover:bg-cyan-400/20 cursor-pointer">
-                    <th class="hover:bg-cyan-500/30" onclick={() => {goto("channels/" + channel)}}>{channel} Tutorials</th>
-                    <td class="hover:bg-cyan-500/30" onclick={() => {window.location = "https://youtube.com/" + channel}}>Profile Page</td>
+                    
+                    <th class="hover:bg-cyan-500/30" onclick={() => {goto("channels/" + channel.url.replace('https://www.youtube.com/@', '').toLowerCase())}}>{channel.name}</th>
+                    <td >{channel.category}</td>
+                    <td class="hover:bg-cyan-500/30" onclick={() => {window.location = channel.url}}>Profile Page</td>
                 </tr>
             {/each}
             </tbody>

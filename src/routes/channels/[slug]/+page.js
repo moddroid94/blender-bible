@@ -18,6 +18,7 @@ export const load = ({params}) => {
 	if (filteredposts.length > 0) {
 		data = filteredposts.map((post) => ({
 			vid: post.vid,
+			image: post.image,
 			title: post.title,
 			author: post.author,
 			description: post.description,

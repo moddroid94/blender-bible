@@ -1,14 +1,13 @@
 <script>
-
-	let { vid, title, author, description, version, renderer, tags } = $props();
+	let { vid, image, title, author, description, version, renderer, tags } = $props();
 </script>
 
 
 <div href="/" class="card bg-base-300 w-96 shadow-sm transition duration-500 outline-1 outline-primary/0 hover:outline-primary/20 ">
 	<figure class="group cursor-pointer">
-		<a href={'https://www.youtube.com/watch?v=' + vid}>
+		<a href={vid}>
 			<img class="object-cover w-full"
-		src={'https://i.ytimg.com/vi/'+ vid + '/hqdefault.jpg'}
+		src={image}
 		alt="Shoes" />
 		</a>
 		<div class="absolute !pointer-events-none"> 
@@ -16,15 +15,13 @@
 		</div>
 	</figure>
 	<div class="card-body">
-		<h2 class="card-title">
+		<h2 class="card-title line-clamp-2 text-ellipsis">
 		{title}
-		<div class="badge badge-primary text-primary-content">NEW</div>
 		</h2>
 		<h3 class="text-md text-neutral-400 font-medium">
 			By: <a href={"/channels/" + author}>{author}</a>
 		</h3>
-		<p class="py-2">{description}</p>
-		<div class="flex gap-2">
+		<div class="flex gap-2 mt-4 mb-4">
 			<button class="btn btn-sm btn-soft btn-warning text-base-content rounded-md hover:text-warning-content">Blender {version}</button>
 			{#if renderer}
 				<button class="btn btn-sm btn-soft btn-warning text-base-content rounded-md hover:text-warning-content">{renderer}</button>
@@ -33,7 +30,7 @@
 		<div class="card-actions justify-start mt-2">
 			{#each tags as tag, index}
 				{#if index < 3}
-					<button class="btn btn-soft btn-primary btn-xs rounded-md">
+					<button class="btn btn-soft btn-primary btn-xs rounded-md mr-2">
 						#{tag}
 					</button>
 				{:else if index == 3}

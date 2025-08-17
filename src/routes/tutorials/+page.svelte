@@ -54,9 +54,9 @@
 					for (let tag of selectedTags) {
 						if (VideoTags.includes(tag)) {
 							pass = true;
+							break
 						} else {
 							pass = false;
-							break
 						}
 					}
 				}
