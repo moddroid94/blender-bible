@@ -1,5 +1,6 @@
 <script>
 	let {tags, selectedTags = $bindable()} = $props();
+	let dropstate = $state(false)
 
 	const setTag = (tag, v) => {
 		if (!selectedTags.includes(tag)) {
@@ -13,12 +14,28 @@
 			}
 		}
 	}
-	
-	const closeDrop = (event) => {
-		if (event.target.id != "drop-controller") {
-			let element = document.getElementById("drop-controller")
-			element.checked = false;
+	const toggleDrop = (element, state) => {
+		if (state) {
+			 let newclass = element.className.replace("opacity-0 scale-y-0", "opacity-100");
+			 element.className = newclass;
+		} else {
+			let newclass = element.className.replace("opacity-100", "opacity-0 scale-y-0");
+			element.className = newclass;
 		}
+		
+	}
+
+	const closeDrop = (event) => {
+		let element = document.getElementById("drop-controlled")
+		if (event.target.id == "drop-controller") {
+			toggleDrop(element, element.classList.contains("opacity-0"))
+		} else if (tags.includes(event.target.id)) {
+
+		} else {
+			toggleDrop(element,false)
+		}
+		
+		console.log(element, event.target.id)
 		
 	}
 
@@ -26,16 +43,15 @@
 </script>
 
 
-<label class="menu input join-item will-change transition-all duration-500 !outline-0 w-[30%] cursor-pointer content-clip">
-	<input id="drop-controller" type="checkbox" class="hidden peer" />
-	<span class="truncate text-ellipsis">{selectedTags.length > 0 ? selectedTags : "all tags"}</span>
-	<div id="drop-controller" class="hidden peer-checked:flex transition-all will-change absolute bg-base-200 border rounded-md w-full mt-8">
-		<ul id="drop-controller" class="bg-base w-full will-change transition-all duration-500">
+<div id="drop-controller" class="menu input join-item will-change transition-all duration-500 !outline-0 w-[30%] cursor-pointer content-clip">
+	<span id="drop-controller" class="truncate text-ellipsis w-full">{selectedTags.length > 0 ? selectedTags : "all tags"}</span>
+	<div id="drop-controlled" class="flex transition-all will-change absolute bg-base-200 border rounded-md w-full mt-8 origin-top opacity-0 scale-y-0 overflow-hidden">
+		<ul class="bg-base w-full will-change transition-all duration-500">
 			{#each tags as tag }
 			<li>
-				<label id="drop-controller" class="flex cursor-pointer px-2 py-1 transition-colors hover:bg-base-400 rounded-md [&:has(input:checked)]:bg-blue-200 [&:has(input:checked)]:text-primary-content">
+				<label id={tag} class={"rounded-md " + (selectedTags.includes(tag) ? "bg-secondary text-secondary-content" : "") }>{tag}
 					<input class="cursor-pointer w-0"
-					id="drop-controller"
+					id={tag}
 					type="checkbox"
 					name={tag}
 					value={tag}
@@ -44,10 +60,10 @@
 						(v) => setTag(tag, v)
 					}
 					/>
-					<span id="drop-controller" class="">{tag}</span>
 				</label>
+				
 			</li>
 			{/each}
 		</ul>
 	</div>
-</label>
+</div>

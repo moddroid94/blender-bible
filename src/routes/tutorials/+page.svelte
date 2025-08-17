@@ -22,7 +22,7 @@
 
 	$effect(() => {
 		searchVideo();
-		$inspect(filteredVideos, selectedTags)
+		//$inspect(filteredVideos, selectedTags)
 	});
 
 	const getTags = () => {
