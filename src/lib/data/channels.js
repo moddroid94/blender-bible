@@ -20,7 +20,7 @@ export const channels=[
     {
         "name": "FranzRohrle",
         "category": "BLENDER OCTANE SPECIFIC TUTORIALS",
-        "channel_url": "https://www.youtube.com/@FranzRohrle",
+        "channel_url": "https://www.youtube.com/FranzRohrle",
         "thumbnail_url": "https://yt3.googleusercontent.com/ytc/APkrFKafopresxg52SnpQYjgAOCExvIbBHZkbt-ZjPGp_g=s176-c-k-c0x00ffffff-no-rj"
     },
     {
