@@ -1,7 +1,8 @@
 <script>
 	import '../app.css';
-	export const trailingSlash = 'always';
-	
+	// This can be false if you're using a fallback (i.e. SPA mode)
+	export const prerender = true;
+
 	let { children } = $props();
 </script>
 
