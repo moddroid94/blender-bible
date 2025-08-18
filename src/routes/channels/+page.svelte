@@ -6,19 +6,8 @@
     import ChannelCard from '$lib/ChannelCard.svelte';
 
     let { data } = $props();
-    let channels = $state([]);
 
 
-    const getChannels = () => {
-		for (let videoObj of data.summaries) {
-            if (!channels.includes(videoObj.author.toLowerCase())) {
-                channels.push(videoObj.author.toLowerCase())
-            }
-		}
-	    channels = channels.sort();
-
-	}	
-	onMount(() => getChannels());
 </script>
 
 <div class="flex bg-base-200 h-54 p-4  justify-center">
@@ -43,7 +32,7 @@
             {#each data.channels as channel}
                 <tr  class="transition hover:bg-cyan-400/20 cursor-pointer">
                     
-                    <th class="hover:bg-cyan-500/30" onclick={() => {goto("channels/" + channel.url.replace('https://www.youtube.com/', '').toLowerCase())}}>{channel.name}</th>
+                    <th>{channel.name}</th>
                     <td >{channel.category}</td>
                     <td class="hover:bg-cyan-500/30" onclick={() => {window.location = channel.url}}>Profile Page</td>
                 </tr>
