@@ -20,21 +20,23 @@
 
 <div class="p-4">
     <div class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
-        <table class="table">
+        <table class="table table-fixed min-w-200">
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th class="w-54">Name</th>
                     <th>Category</th>
-                    <th>Channel</th>
                 </tr>
             </thead>
             <tbody>
             {#each data.channels as channel}
-                <tr  class="transition hover:bg-cyan-400/20 cursor-pointer">
+                <tr  class="transition hover:bg-primary/20 cursor-pointer">
                     
-                    <th>{channel.name}</th>
-                    <td >{channel.category}</td>
-                    <td class="hover:bg-cyan-500/30" onclick={() => {window.location = channel.url}}>Profile Page</td>
+                    <th class="hover:bg-primary/30" onclick={() => {window.location = channel.url}}>{channel.name}</th>
+                    <td class="text-wrap overflow-clip">
+                        {#each channel.categories as category}
+                            <span class="btn btn-xs btn-secondary m-1 contain-content h-auto py-1">{category}</span>
+                        {/each}
+                    </td>
                 </tr>
             {/each}
             </tbody>

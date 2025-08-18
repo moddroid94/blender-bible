@@ -16,7 +16,7 @@ export function load() {
         })),
         channels: channels.map((channel) => ({
             name: channel.name,
-            category: channel.category,
+            categories: channel.category,
             url: channel.channel_url,
             thumbnail_url: channel.thumbnail_url
         })) 
