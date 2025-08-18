@@ -1,6 +1,7 @@
 <script>
 	import '../app.css';
-
+	export const trailingSlash = 'always';
+	
 	let { children } = $props();
 </script>
 
