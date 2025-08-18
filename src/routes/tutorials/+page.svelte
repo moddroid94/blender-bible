@@ -61,7 +61,7 @@
 					}
 				}
 				if (searchTerm && pass) {
-					if (VideoTitle.includes(searchTerm)) {
+					if (VideoTitle.includes(searchTerm.toLowerCase())) {
 						pass = true;
 					} else {
 						pass = false;
