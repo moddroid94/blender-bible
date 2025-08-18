@@ -3,6 +3,7 @@ export const ssr = false;
 import { error } from '@sveltejs/kit';
 import { posts } from '$lib/tutorials/data.js';
 
+
 export const load = ({params}) => {
 	let data = {};
 	let filteredposts = {};

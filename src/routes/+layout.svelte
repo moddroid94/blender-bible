@@ -1,7 +1,5 @@
 <script>
 	import '../app.css';
-	
-
 	let { children } = $props();
 </script>
 
@@ -20,7 +18,7 @@
 				<ul class="p-2">
 					<li><a href="/tutorials">Tutorials</a></li>
 					<li><a href="/channels">Channels</a></li>
-					<li><a href="/tools">Tools</a></li>
+					<li><a href="/sites">Sites</a></li>
 				</ul>
 				</li>
 				<li><a href="/contribute">Contribute</a></li>
@@ -38,7 +36,7 @@
 				<ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
 					<li><a href="/tutorials">Tutorials</a></li>
 					<li><a href="/channels">Channels</a></li>
-					<li><a href="/tools">Tools</a></li>
+					<li><a href="/sites">Sites</a></li>
 				</ul>
 				</div>
 			</li>
