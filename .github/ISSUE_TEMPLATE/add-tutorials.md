@@ -1,8 +1,8 @@
 ---
 name: Add Tutorials
 about: Add some tutorials to the list
-title: ''
-labels: 'add-tutorials'
+title: "[ADD]: "
+labels: ["add-tutorials"]
 assignees: ''
 body:
 - type: textarea
