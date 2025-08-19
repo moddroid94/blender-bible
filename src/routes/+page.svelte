@@ -2,8 +2,10 @@
 	
 </script>
 
-<div class="flex w-full bg-base-200 m-4 p-4 rounded-md border-1 border-accent/20 justify-center gap-4">
-    <a href="/tutorials">
+<div class="mx-4">
+    
+<div class="flex flex-col lg:flex-row w-full bg-base-200 py-4 rounded-md border-1 border-accent/20 justify-center items-center gap-4 contain-content">
+    <a class="flex w-64 lg:w-69" href="/tutorials">
         <div class="card bg-base-100 w-96 shadow-sm cursor-pointer" >
             <figure class="px-10 pt-10 hover:scale-105 transition-transform">
                 <img
@@ -18,7 +20,7 @@
             </div>
         </div>
     </a>
-    <a href="/channels">
+    <a class="flex  w-64" href="/channels">
         <div class="card bg-base-100 w-96 shadow-sm cursor-pointer">
             <figure class="px-10 pt-10 hover:scale-105 transition-transform">
                 <img
@@ -33,7 +35,7 @@
             </div>
         </div>
     </a>
-    <a href="/sites">
+    <a class="flex  w-64" href="/sites">
         <div class="card bg-base-100 w-96 shadow-sm cursor-pointer">
             <figure class="px-10 pt-10 hover:scale-105 transition-transform">
                 <img
@@ -48,4 +50,5 @@
             </div>
         </div>
     </a>
+</div>
 </div>
