@@ -6,8 +6,8 @@ labels: ["addition"]
 body:
 - type: markdown
   attributes:
-  value: |
-    "Hi, you can add tutorials to the site by filling this form below, you'll need to have the list as a formatted JSON list, not just a list of links."
+    value: |
+      "Hi, you can add tutorials to the site by filling this form below, you'll need to have the list as a formatted JSON list, not just a list of links."
 - type: textarea
   id: what-happened
   attributes:
