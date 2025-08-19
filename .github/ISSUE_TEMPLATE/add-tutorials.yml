@@ -1,16 +1,14 @@
 ---
 name: Add Tutorials
-about: Add some tutorials to the list
 title: "[ADD]: "
 labels: ["add-tutorials"]
-assignees: ''
 body:
 - type: textarea
   id: what-happened
   attributes:
     label: tutorials JSON list
     description: "Copy here the json list of tutorials formatted as per docs"
-    placeholder: " {..},{..},{..} "
+    placeholder: " add json array here "
     value: ""
   validations:
     required: true
