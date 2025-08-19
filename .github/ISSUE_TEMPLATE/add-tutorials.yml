@@ -2,8 +2,13 @@
 name: Add Tutorials - JSON
 description: Request adding a list of tutorials to the site - already formatted in a JSON list as per docs
 title: "[ADD]: "
-labels: ["add-tutorials"]
+labels: ["addition"]
 body:
+- type: markdown
+  attributes:
+  value: |
+    "Hi, you can add tutorials to the site by filling this form below, 
+    you'll need to have the list as a formatted JSON list, not just a list of links."
 - type: textarea
   id: what-happened
   attributes:
@@ -18,7 +23,7 @@ body:
   id: terms
   attributes:
     label: "Code of Conduct"
-    description: "Confirm that the syntax is correct?"
+    description: "Confirm that the content is good"
     options:
       - label: "I confirm that I've provided useful content and not AI slop"
         required: true
