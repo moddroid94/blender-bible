@@ -6,7 +6,7 @@ body:
 - type: textarea
   id: what-happened
   attributes:
-    label: tutorials JSON list
+    label: "tutorials JSON list"
     description: "Copy here the json list of tutorials formatted as per docs"
     placeholder: " add json array here "
     value: ""
@@ -16,10 +16,10 @@ body:
 - type: checkboxes
   id: terms
   attributes:
-    label: Code of Conduct
-    description: Confirm that the syntax is correct?
+    label: "Code of Conduct"
+    description: "Confirm that the syntax is correct?"
     options:
-      - label: I confirm that I've provided useful content and not AI slop
+      - label: "I confirm that I've provided useful content and not AI slop"
         required: true
 ---
 
