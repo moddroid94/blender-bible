@@ -19,6 +19,7 @@
 					<li><a href="/tutorials">Tutorials</a></li>
 					<li><a href="/channels">Channels</a></li>
 					<li><a href="/sites">Sites</a></li>
+					<li><a href="/addons">Addons</a></li>
 				</ul>
 				</li>
 				<li><a href="/contribute">Contribute</a></li>
@@ -37,6 +38,7 @@
 					<li><a href="/tutorials">Tutorials</a></li>
 					<li><a href="/channels">Channels</a></li>
 					<li><a href="/sites">Sites</a></li>
+					<li><a href="/addons">Addons</a></li>
 				</ul>
 				</div>
 			</li>
