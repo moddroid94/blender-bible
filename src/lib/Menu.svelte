@@ -48,11 +48,11 @@
 
 <div id="drop-controller" class="menu input join-item will-change transition-all duration-500 !outline-0 w-[50%] lg:w-[20%] cursor-pointer content-clip">
 	<span id="drop-controller" class="truncate text-ellipsis w-full">{selectedTags.length > 0 ? selectedTags : "All tags"}</span>
-	<div id="drop-controlled" class="flex transition-all will-change absolute bg-base-200 border rounded-md w-full mt-8 origin-top opacity-0 scale-y-0 overflow-y-scroll h-78">
-		<ul class="bg-base w-full will-change transition-all duration-500">
+	<div id="drop-controlled" class="flex transition-all will-change absolute bg-base-200 border rounded-md w-full mt-8 origin-top opacity-0 scale-y-0 overflow-y-scroll overflow-x-auto h-78">
+		<ul class="bg-base will-change transition-all duration-500">
 			{#each tags as tag }
 			<li>
-				<label id={tag} class={"rounded-md " + (selectedTags.includes(tag) ? "bg-secondary text-secondary-content" : "") }>{tag}
+				<label id={tag} class={" rounded-md min-w-full " + (selectedTags.includes(tag) ? "bg-secondary text-secondary-content" : "") }>{tag}
 					<input class="cursor-pointer w-0"
 					id={tag}
 					type="checkbox"
