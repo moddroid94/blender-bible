@@ -1,5 +1,6 @@
 ---
-name: Add Tutorials
+name: Add Tutorials - JSON
+description: Request adding a list of tutorials to the site - already formatted in a JSON list as per docs
 title: "[ADD]: "
 labels: ["add-tutorials"]
 body:
