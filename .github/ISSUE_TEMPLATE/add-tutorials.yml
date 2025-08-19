@@ -8,8 +8,8 @@ body:
   attributes:
     label: "tutorials JSON list"
     description: "Copy here the json list of tutorials formatted as per docs"
-    placeholder: " add json array here "
-    value: ""
+    placeholder: "add json array here"
+    value: "add json array here"
   validations:
     required: true
 
