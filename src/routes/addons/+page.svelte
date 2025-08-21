@@ -17,21 +17,21 @@
 				<tr>
 					<th class="min-w-40">Name</th>
 					<th class="min-w-64">Function</th>
-					<th class="min-w-64">Link</th>
+					<th class="min-w-64">Notes</th>
 				</tr>
 			</thead>
 			<tbody>
 				{#each data.sites as site}
-					<tr class="transition hover:bg-primary/20 cursor-pointer">
+					<tr class="">
 						<th
-							class="hover:bg-primary/40 hover:rounded-full"
+							class="transition hover:bg-primary/20 cursor-pointer"
 							onclick={() => {
 								window.location = site.url;
 							}}>{site.name}</th
 						>
 						<td class="text-wrap overflow-clip">
-							<span class="btn btn-xs btn-secondary m-1 contain-content h-auto py-1"
-								>{site.categories}</span
+							<span class="btn btn-xs btn-soft btn-warning pointer-events-none m-1 contain-content h-auto py-1"
+								>{site.categories.toUpperCase()}</span
 							>
 						</td>
 						<td> {site.notes}</td>

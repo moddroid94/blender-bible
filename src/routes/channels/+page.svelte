@@ -27,16 +27,16 @@
 			</thead>
 			<tbody>
 				{#each data.channels as channel}
-					<tr class="transition hover:bg-primary/20 cursor-pointer">
+					<tr class=" cursor-pointer">
 						<th
-							class="hover:bg-primary/30"
+							class="transition hover:bg-primary/30"
 							onclick={() => {
 								window.location = channel.url;
 							}}>{channel.name}</th
 						>
 						<td class="text-wrap overflow-clip">
 							{#each channel.categories as category}
-								<span class="btn btn-xs btn-secondary m-1 contain-content h-auto py-1"
+								<span class="btn btn-xs btn-soft btn-warning m-1 contain-content h-auto py-1 pointer-events-none"
 									>{category}</span
 								>
 							{/each}

@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import "tailwindcss";
 @plugin "daisyui" {
-    themes: forest --prefersdark;
+    themes: halloween --prefersdark;
 }
-
+@theme {
+  --color-blender-3: oklch(0.98 0.04 113.22);
+}
 
 
 body {
