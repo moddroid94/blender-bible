@@ -1,14 +1,15 @@
 <div align="center">
   <h1>Welcome to The Blender Bible👋</h1>
-</div>
-<img 
+  <img 
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 30%;"
-    src="https://blenderbible.pages.dev/logo.png" 
+    src="https://blenderbible.pages.dev/channels.webp" 
     alt="Our logo">
 </img>
+</div>
+
 
 # The Blender Bible
 https://blenderbible.pages.dev
